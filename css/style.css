@@ -56,9 +56,9 @@ header nav ul li a.active {
 /* Hero Section (Index Page) */
 .hero {
   height: 80vh;
-  /* Updated background to use 'inicioback.webp' */
+  /* IMPORTANT: note the correct relative path -> "../" to go back one folder from css/ */
   background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
-    url('images/Inicioback.webp') no-repeat center center/cover;
+    url('../images/Inicioback.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,7 +250,7 @@ header nav ul li a.active {
 .hero-seguros {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('images/seguros-hero.jpg') no-repeat center center/cover;
+    url('../images/seguros-hero.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,7 +322,7 @@ header nav ul li a.active {
 .hero-fianzas {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('images/fianzas-hero.jpg') no-repeat center center/cover;
+    url('../images/fianzas-hero.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,7 +386,7 @@ footer {
 .hero-servicios {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('images/servicios-hero.jpg') no-repeat center center/cover;
+    url('../images/servicios-hero.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -416,7 +416,7 @@ footer {
 .hero-alianzas {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('images/alianzas-hero.jpg') no-repeat center center/cover;
+    url('../images/alianzas-hero.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,7 +452,7 @@ footer {
 .hero-contacto {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('images/contacto-hero.jpg') no-repeat center center/cover;
+    url('../images/contacto-hero.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
