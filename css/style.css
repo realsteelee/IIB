@@ -551,7 +551,7 @@ footer {
 /* Adjust the logo size globally for all pages */
 .logo {
   height: 80px;       /* Increase height */
-  width: 120px;       /* Increase width */
+  width: 160px;       /* Increase width */
   object-fit: cover;  /* Ensures the image scales without distortion */
 }
 
