@@ -7,19 +7,14 @@
   <title>Nuestros Servicios - IIB Seguros</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* A container at the bottom to position address on the left and quote on the right */
-    .servicios-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-top: 2em; /* just a bit of spacing above */
+    /* Add top spacing before headings */
+    .top-space {
+      margin-top: 1em; /* creates space before these headings */
     }
-    .servicios-bottom .left-address {
-      text-align: left;
-    }
-    .servicios-bottom .right-quote {
-      text-align: right;
-      /* Could also add a max-width if you want it to not wrap too far */
+    /* Center quote + address at the bottom */
+    .services-bottom {
+      text-align: center;
+      margin-top: 2em;
     }
   </style>
 </head>
@@ -27,7 +22,7 @@
   <!-- Header -->
   <header>
     <div class="header-container">
-      <img src="images/IIB logo.png" alt="IIB Seguros Logo" class="logo" />
+      <img src="images/IIB logo.png" alt="IIB Seguros Logo" class="logo">
       <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -51,17 +46,13 @@
 
   <!-- Main Content -->
   <main class="page-content" style="max-width: 1000px; margin: 2em auto; padding: 0 1em;">
+    <p>
+      En IIB Agente de Seguros y Fianzas S.A. de C.V. ofrecemos servicios especializados para 
+      brindarte protección completa y soluciones personalizadas, desde la atención de siniestros 
+      hasta la asesoría actuarial.
+    </p>
 
-    <!-- Intro Paragraph -->
-    <section>
-      <p>
-        En IIB Agente de Seguros y Fianzas S.A. de C.V. ofrecemos servicios especializados para 
-        brindarte protección completa y soluciones personalizadas, desde la atención de siniestros 
-        hasta la asesoría actuarial.
-      </p>
-    </section>
-
-    <!-- Siniestros -->
+    <!-- Siniestros Section -->
     <section style="margin-top: 2em;">
       <h2 style="color: #00264d;">Siniestros</h2>
       <p>
@@ -70,7 +61,8 @@
         365 días del año. Nos encargamos de coordinar la presentación de un ajustador, analizar 
         la reclamación, determinar pérdidas y/o daños y gestionar el pago de la indemnización.
       </p>
-      <h3>Servicios en Siniestros</h3>
+      <!-- Space before “Servicios en Siniestros” -->
+      <h3 class="top-space">Servicios en Siniestros</h3>
       <ul>
         <li>Evaluación de riesgos y pérdidas</li>
         <li>Coberturas</li>
@@ -84,7 +76,7 @@
       </p>
     </section>
 
-    <!-- Actuaría -->
+    <!-- Actuaría Section -->
     <section style="margin-top: 2em;">
       <h2 style="color: #00264d;">Actuaría</h2>
       <p>
@@ -92,7 +84,8 @@
         derivadas de Pensiones, Retiro Voluntario y Beneficios a Largo Plazo, prima 
         de antigüedad y más.
       </p>
-      <h3>Asesoría Integral en:</h3>
+      <!-- Space before “Asesoría Integral en” -->
+      <h3 class="top-space">Asesoría Integral en:</h3>
       <ul>
         <li>Divulgación de la implementación del plan</li>
         <li>Registro de la documentación para cumplir con disposiciones Legales y Fiscales</li>
@@ -100,20 +93,16 @@
       </ul>
     </section>
 
-    <!-- Bottom: Address Left, Quote Right -->
-    <div class="servicios-bottom">
-      <div class="left-address">
-        <p style="margin-bottom: 0.5em;">
-          <strong>Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800</strong><br />
-          <strong>Tel/Fax:</strong> (55) 5658-4949
-        </p>
-      </div>
-      <div class="right-quote">
-        <p style="margin-bottom: 0.5em;">
-          Su protección familiar y patrimonial<br />
-          “Asegure hoy y proteja el mañana”
-        </p>
-      </div>
+    <!-- Bottom (Centered) -->
+    <div class="services-bottom">
+      <p>
+        Su protección familiar y patrimonial<br />
+        “Asegure hoy y proteja el mañana”
+      </p>
+      <p>
+        Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800<br />
+        Tel/Fax: (55) 5658-4949
+      </p>
     </div>
   </main>
 
