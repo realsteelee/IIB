@@ -554,3 +554,14 @@ footer {
   width: 225px;       /* Increase width */
   object-fit: cover;  /* Ensures the image scales without distortion */
 }
+.hero {
+  height: 80vh;
+  background: 
+    linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
+    url('images/inicioback.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
