@@ -502,5 +502,51 @@ footer {
   flex: 1; /* each takes half the container if there's space */
   min-width: 250px; /* ensures they don't shrink too much */
 }
+.hero-servicios,
+.hero-alianzas {
+  height: 40vh;
+  background: linear-gradient(rgba(0,0,50,0.5), rgba(0,0,50,0.5)), url('images/hero-background.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-servicios-content,
+.hero-alianzas-content {
+  /* same styling you used for hero-seguros-content */
+}
+
+/* Light background container like .seguros-content */
+.page-content {
+  background: #f4f4f9; /* or white, if that’s what you used */
+  padding: 2em 1em;
+}
+
+/* Intro block styling */
+.intro-block {
+  max-width: 1000px;
+  margin: 0 auto 2em auto;
+}
+
+/* Each content block styling */
+.content-block {
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+/* Example: .alianzas-lists for the two columns */
+.alianzas-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.aseguradoras-list,
+.afianzadoras-list {
+  flex: 1;
+  min-width: 250px;
+}
 
 
