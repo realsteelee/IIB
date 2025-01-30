@@ -7,23 +7,18 @@
   <title>Nuestros Servicios - IIB Seguros</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* Create space before the indicated headings */
-    .top-space { 
-      margin-top: 1em; 
+    .top-space {
+      margin-top: 1em; /* space before “Servicios en Siniestros” & “Asesoría Integral en:” */
     }
-
-    /* Bottom container: address on left, quote on right */
-    .services-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-top: 2em; /* some spacing above */
+    /* Indent the final address paragraph */
+    .bottom-indent {
+      margin-left: 2em; /* or whatever indentation you like */
+      margin-top: 2em; /* spacing above it */
     }
-    .services-bottom .left-info {
-      text-align: left;
-    }
-    .services-bottom .right-info {
-      text-align: right;
+    /* Center “Su protección…” quote */
+    .quote-center {
+      text-align: center;
+      margin-top: 2em; /* space above the quote */
     }
   </style>
 </head>
@@ -103,21 +98,18 @@
       </ul>
     </section>
 
-    <!-- Bottom: Side-by-side -->
-    <div class="services-bottom">
-      <div class="left-info">
-        <p>
-          Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800<br />
-          Tel/Fax: (55) 5658-4949
-        </p>
-      </div>
-      <div class="right-info">
-        <p>
-          Su protección familiar y patrimonial<br />
-          “Asegure hoy y proteja el mañana”
-        </p>
-      </div>
-    </div>
+    <!-- Centered “Su protección...” -->
+    <p class="quote-center">
+      Su protección familiar y patrimonial<br />
+      “Asegure hoy y proteja el mañana”
+    </p>
+
+    <!-- Bottom-left for the address, bold except the phone number -->
+    <p class="bottom-indent">
+      <strong>Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800</strong><br />
+      <strong>Tel/Fax:</strong> (55) 5658-4949
+    </p>
+
   </main>
 
   <!-- Footer -->
