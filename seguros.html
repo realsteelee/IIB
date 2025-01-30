@@ -4,14 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Información detallada de nuestros seguros en IIB Agente de Seguros y Fianzas.">
-  <title>Seguros - IIB Seguros</title>
+  <title>Nuestros Seguros - IIB Seguros</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .top-space {
+      margin-top: 1em;
+    }
+    .quote-center {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .bottom-indent {
+      margin-left: 2em;
+      margin-top: 2em;
+      font-size: 0.875rem; /* ~14px, about 2 points smaller than 16px */
+    }
+    .bottom-indent strong {
+      font-size: 1rem; /* remain bold but also default ~16px if you prefer */
+    }
+    .logo {
+      height: 60px;
+      width: 120px; /* Make it wider while keeping height 60px */
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="header-container">
-      <img src="images/IIB logo.png" alt="IIB Seguros Logo" class="logo" />
+      <!-- Updated .logo style: height 60px, width 120px -->
+      <img src="images/IIB logo.png" alt="IIB Seguros Logo" class="logo">
       <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -34,7 +57,7 @@
   </section>
 
   <!-- Main Content -->
-  <main class="seguros-content">
+  <main class="seguros-content" style="max-width: 1000px; margin: 2em auto; padding: 0 1em;">
     <!-- Intro / Overview Section -->
     <section class="seguros-intro">
       <p>
@@ -82,7 +105,7 @@
         Contamos con planes estratégicos que brindan soluciones integrales a
         empresas de todos los tamaños.
       </p>
-      <h3 style="margin-top: 1em;">Planes y Programas Estratégicos</h3>
+      <h3>Planes y Programas Estratégicos</h3>
       <ul>
         <li>Montaje de maquinaria y obra civil</li>
         <li>Equipo electrónico</li>
@@ -99,7 +122,7 @@
         <li>Auditorías de seguimiento</li>
       </ul>
 
-      <h3 style="margin-top: 1em;">Proyectos Operativos</h3>
+      <h3>Proyectos Operativos</h3>
       <ul>
         <li>Auditoría de pólizas vigentes</li>
         <li>Análisis de procesos de operación</li>
@@ -117,7 +140,7 @@
         la presentación de un ajustador, analizar la reclamación, determinar pérdidas 
         y/o daños, hasta gestionar el pago de la indemnización.
       </p>
-      <h3 style="margin-top: 1em;">Servicios:</h3>
+      <h3 class="top-space">Servicios:</h3>
       <ul>
         <li>Evaluación de riesgos y pérdidas</li>
         <li>Coberturas</li>
@@ -159,22 +182,18 @@
         </li>
         <li>Prima de antigüedad</li>
       </ul>
-      <p style="margin-top: 1em;"><strong>Asesoría Integral en:</strong></p>
+      <p class="top-space"><strong>Asesoría Integral en:</strong></p>
       <ul>
         <li>Divulgación de la implementación del plan</li>
         <li>Registro de la documentación para cumplir con disposiciones Legales y Fiscales</li>
-        <!-- 10 spaces after the last bullet -->
-        <li>Medios de financiamiento para el plan (Casas de Bolsa, Aseguradoras y Bancos)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li>Medios de financiamiento para el plan (Casas de Bolsa, Aseguradoras y Bancos)</li>
       </ul>
-    </section>
-
-    <!-- Contact & Closing Note -->
-    <section class="seguros-block contact-info">
-      <p class="closing-quote">
+      <p class="quote-center">
         Su protección familiar y patrimonial<br />
-        <em>“Asegure hoy y proteja el mañana”</em>
+        “Asegure hoy y proteja el mañana”
       </p>
-      <p>
+      <!-- bottom-indent class for address, smaller font but bold label, normal phone number -->
+      <p class="bottom-indent">
         <strong>Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800</strong><br />
         <strong>Tel/Fax:</strong> (55) 5658-4949
       </p>
