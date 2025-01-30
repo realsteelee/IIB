@@ -491,5 +491,16 @@ footer {
 .logo {
   height: 100px; 
 }
+.alianzas-lists {
+  display: flex;
+  flex-wrap: wrap; /* so they wrap on narrow screens */
+  gap: 2em; /* spacing between columns */
+}
+
+.aseguradoras-list,
+.afianzadoras-list {
+  flex: 1; /* each takes half the container if there's space */
+  min-width: 250px; /* ensures they don't shrink too much */
+}
 
 
