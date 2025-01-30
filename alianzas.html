@@ -6,12 +6,21 @@
   <meta name="description" content="Alianzas de IIB Agente de Seguros y Fianzas con reconocidas compañías de seguros y fianzas."/>
   <title>Nuestras Alianzas - IIB Seguros</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .alianzas-bottom {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .space-after {
+      margin-bottom: 1em;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="header-container">
-      <img src="images/IIB logo.png" alt="IIB Seguros Logo" class="logo">
+      <img src="images/IIB logo.png" alt="IIB Seguros Logo" class="logo" />
       <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -33,26 +42,22 @@
     </div>
   </section>
 
-  <!-- Main Content (Light Background) -->
-  <main class="page-content">
-    <!-- Intro Block -->
-    <section class="intro-block">
-      <p>
-        En IIB Agente de Seguros y Fianzas, contamos con el respaldo de grandes 
-        empresas de prestigio, para que el cliente tenga la libertad de elegir 
-        según sus necesidades.
+  <!-- Main Content -->
+  <main class="alianzas-content">
+    <!-- Intro Section -->
+    <section>
+      <!-- changed color of “Nuestras Alianzas” to #00264d just for the heading below if you use it. 
+           But you have a main hero, so we might not need another big heading. 
+           We'll assume you wanted your main heading inside the content, though. -->
+      <h2 style="color: #00264d;">Nuestras Alianzas</h2>
+      <p class="space-after">
+        Dividimos nuestras alianzas en dos categorías principales: Aseguradoras y Afianzadoras. 
+        De esta forma, ofrecemos opciones de cobertura y fianzas con diversas compañías de alto prestigio.
       </p>
     </section>
 
     <!-- Aseguradoras and Afianzadoras -->
-    <section class="content-block">
-      <h2>Nuestras Alianzas</h2>
-      <p>
-        Dividimos nuestras alianzas en dos categorías principales: Aseguradoras y 
-        Afianzadoras. De esta forma, ofrecemos opciones de cobertura y fianzas 
-        con diversas compañías de alto prestigio.
-      </p>
-
+    <section class="alianzas-block">
       <div class="alianzas-lists">
         <div class="aseguradoras-list">
           <h3>Aseguradoras</h3>
@@ -84,6 +89,18 @@
         </div>
       </div>
     </section>
+
+    <!-- Add the text + address in the same centered format -->
+    <div class="alianzas-bottom">
+      <p>
+        Su protección familiar y patrimonial<br />
+        “Asegure hoy y proteja el mañana”
+      </p>
+      <p>
+        Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800<br />
+        Tel/Fax: (55) 5658-4949
+      </p>
+    </div>
   </main>
 
   <!-- Footer -->
