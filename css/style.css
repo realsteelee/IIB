@@ -514,3 +514,14 @@ footer {
   flex: 1; /* each takes half the container if there's space */
   min-width: 250px; /* ensures they don't shrink too much */
 }
+
+.hero {
+  height: 80vh;
+  background: url('../images/Inicioback.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
