@@ -7,14 +7,23 @@
   <title>Nuestros Servicios - IIB Seguros</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* Add top spacing before headings */
-    .top-space {
-      margin-top: 1em; /* creates space before these headings */
+    /* Create space before the indicated headings */
+    .top-space { 
+      margin-top: 1em; 
     }
-    /* Center quote + address at the bottom */
+
+    /* Bottom container: address on left, quote on right */
     .services-bottom {
-      text-align: center;
-      margin-top: 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2em; /* some spacing above */
+    }
+    .services-bottom .left-info {
+      text-align: left;
+    }
+    .services-bottom .right-info {
+      text-align: right;
     }
   </style>
 </head>
@@ -46,22 +55,23 @@
 
   <!-- Main Content -->
   <main class="page-content" style="max-width: 1000px; margin: 2em auto; padding: 0 1em;">
+    <!-- Intro Paragraph -->
     <p>
-      En IIB Agente de Seguros y Fianzas S.A. de C.V. ofrecemos servicios especializados para 
-      brindarte protección completa y soluciones personalizadas, desde la atención de siniestros 
-      hasta la asesoría actuarial.
+      En IIB Agente de Seguros y Fianzas S.A. de C.V. ofrecemos servicios especializados 
+      para brindarte protección completa y soluciones personalizadas, desde la atención 
+      de siniestros hasta la asesoría actuarial.
     </p>
 
     <!-- Siniestros Section -->
     <section style="margin-top: 2em;">
       <h2 style="color: #00264d;">Siniestros</h2>
       <p>
-        IIB Agente de Seguros y Fianzas S.A. de C.V. ofrece total disponibilidad por medio de 
-        un sistema de localización personal, garantizando atención las 24 horas del día los 
-        365 días del año. Nos encargamos de coordinar la presentación de un ajustador, analizar 
-        la reclamación, determinar pérdidas y/o daños y gestionar el pago de la indemnización.
+        IIB Agente de Seguros y Fianzas S.A. de C.V. ofrece total disponibilidad 
+        por medio de un sistema de localización personal, garantizando atención 
+        las 24 horas del día los 365 días del año. Nos encargamos de coordinar 
+        la presentación de un ajustador, analizar la reclamación, determinar 
+        pérdidas y/o daños y gestionar el pago de la indemnización.
       </p>
-      <!-- Space before “Servicios en Siniestros” -->
       <h3 class="top-space">Servicios en Siniestros</h3>
       <ul>
         <li>Evaluación de riesgos y pérdidas</li>
@@ -71,8 +81,9 @@
         <li>Soporte y atención las 24 horas</li>
       </ul>
       <p>
-        Además, contamos con una alianza estratégica con un reconocido despacho de abogados 
-        especializados en resolver, por la vía legal, reclamaciones en seguros y fianzas.
+        Además, contamos con una alianza estratégica con un reconocido despacho 
+        de abogados especializados en resolver, por la vía legal, reclamaciones 
+        en seguros y fianzas.
       </p>
     </section>
 
@@ -80,11 +91,10 @@
     <section style="margin-top: 2em;">
       <h2 style="color: #00264d;">Actuaría</h2>
       <p>
-        Brindamos estructuración y análisis preciso de las responsabilidades futuras 
-        derivadas de Pensiones, Retiro Voluntario y Beneficios a Largo Plazo, prima 
-        de antigüedad y más.
+        Brindamos estructuración y análisis preciso de las responsabilidades 
+        futuras derivadas de Pensiones, Retiro Voluntario y Beneficios a 
+        Largo Plazo, prima de antigüedad y más.
       </p>
-      <!-- Space before “Asesoría Integral en” -->
       <h3 class="top-space">Asesoría Integral en:</h3>
       <ul>
         <li>Divulgación de la implementación del plan</li>
@@ -93,16 +103,20 @@
       </ul>
     </section>
 
-    <!-- Bottom (Centered) -->
+    <!-- Bottom: Side-by-side -->
     <div class="services-bottom">
-      <p>
-        Su protección familiar y patrimonial<br />
-        “Asegure hoy y proteja el mañana”
-      </p>
-      <p>
-        Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800<br />
-        Tel/Fax: (55) 5658-4949
-      </p>
+      <div class="left-info">
+        <p>
+          Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800<br />
+          Tel/Fax: (55) 5658-4949
+        </p>
+      </div>
+      <div class="right-info">
+        <p>
+          Su protección familiar y patrimonial<br />
+          “Asegure hoy y proteja el mañana”
+        </p>
+      </div>
     </div>
   </main>
 
