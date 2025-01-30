@@ -7,12 +7,16 @@
   <title>Nuestras Alianzas - IIB Seguros</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .alianzas-bottom {
+    .space-after {
+      margin-bottom: 1em; /* space after that dividing paragraph */
+    }
+    .quote-center {
       text-align: center;
       margin-top: 2em;
     }
-    .space-after {
-      margin-bottom: 1em;
+    .bottom-indent {
+      margin-left: 2em;
+      margin-top: 2em;
     }
   </style>
 </head>
@@ -43,20 +47,14 @@
   </section>
 
   <!-- Main Content -->
-  <main class="alianzas-content">
-    <!-- Intro Section -->
-    <section>
-      <!-- changed color of “Nuestras Alianzas” to #00264d just for the heading below if you use it. 
-           But you have a main hero, so we might not need another big heading. 
-           We'll assume you wanted your main heading inside the content, though. -->
-      <h2 style="color: #00264d;">Nuestras Alianzas</h2>
-      <p class="space-after">
-        Dividimos nuestras alianzas en dos categorías principales: Aseguradoras y Afianzadoras. 
-        De esta forma, ofrecemos opciones de cobertura y fianzas con diversas compañías de alto prestigio.
-      </p>
-    </section>
+  <main class="alianzas-content" style="max-width: 1000px; margin: 2em auto; padding: 0 1em;">
 
-    <!-- Aseguradoras and Afianzadoras -->
+    <h2 style="color: #00264d;">Nuestras Alianzas</h2>
+    <p class="space-after">
+      Dividimos nuestras alianzas en dos categorías principales: Aseguradoras y Afianzadoras.
+      De esta forma, ofrecemos opciones de cobertura y fianzas con diversas compañías de alto prestigio.
+    </p>
+
     <section class="alianzas-block">
       <div class="alianzas-lists">
         <div class="aseguradoras-list">
@@ -90,17 +88,17 @@
       </div>
     </section>
 
-    <!-- Add the text + address in the same centered format -->
-    <div class="alianzas-bottom">
-      <p>
-        Su protección familiar y patrimonial<br />
-        “Asegure hoy y proteja el mañana”
-      </p>
-      <p>
-        Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800<br />
-        Tel/Fax: (55) 5658-4949
-      </p>
-    </div>
+    <!-- Centered quote -->
+    <p class="quote-center">
+      Su protección familiar y patrimonial<br />
+      “Asegure hoy y proteja el mañana”
+    </p>
+
+    <!-- Bottom-left for the address, bold except phone number -->
+    <p class="bottom-indent">
+      <strong>Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800</strong><br />
+      <strong>Tel/Fax:</strong> (55) 5658-4949
+    </p>
   </main>
 
   <!-- Footer -->
