@@ -54,13 +54,13 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Index Page) */
-/* 60vh + cover to fill hero container with no empty space */
+/* => 70vh & background-size: cover */
 .hero {
-  height: 60vh;
-  background: 
+  height: 70vh;
+  background:
     linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
     url('../images/indexpage.webp') center center no-repeat;
-  background-size: cover;  /* fill container without empty space (crops if ratio differs) */
+  background-size: cover; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,12 +248,13 @@ header nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* Hero Section (Seguros Page) */
+/* Hero Section (Seguros Page) => 70vh cover */
 .hero-seguros {
-  height: 40vh;
-  background: 
+  height: 70vh;
+  background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/Inicioback.webp') no-repeat center center/cover;
+    url('../images/Inicioback.webp') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,11 +322,13 @@ header nav ul li a.active {
   text-align: center;
 }
 
-/* Hero Section (Fianzas Page) */
+/* Hero Section (Fianzas Page) => 70vh cover */
 .hero-fianzas {
-  height: 40vh;
-  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/handback.webp') no-repeat center center/cover;
+  height: 70vh;
+  background:
+    linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('../images/handback.webp') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,11 +380,13 @@ header nav ul li a.active {
   color: #555;
 }
 
-/* Hero Section (Contacto Page) */
+/* Hero Section (Contacto Page) => 40vh cover */
 .hero-contacto {
   height: 40vh;
-  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/contactoiib.webp') no-repeat center center/cover;
+  background: 
+    linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('../images/contactoiib.webp') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -432,11 +437,13 @@ footer {
   padding: 1em;
 }
 
-/* Hero Section (Servicios & Alianzas Page) */
+/* Hero Section (Servicios Page) => 70vh cover */
 .hero-servicios {
-  height: 40vh;
-  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/serviciosiib.webp') no-repeat center center/cover;
+  height: 70vh;
+  background:
+    linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('../images/serviciosiib.webp') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,12 +469,13 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Section (Alianzas Page) */
-/* Now using alianzasiib.webp for the Alianzas hero */
+/* Hero Section (Alianzas Page) => 70vh cover */
 .hero-alianzas {
-  height: 40vh;
-  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/alianzasiib.webp') no-repeat center center/cover;
+  height: 70vh;
+  background:
+    linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('../images/alianzasiib.webp') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -490,7 +498,7 @@ footer {
   padding: 0 1em;
 }
 
-/* "Cool style" */
+/* "Cool style" block for alianzas */
 .alianzas-block {
   background: #fafafa;
   border-radius: 8px;
