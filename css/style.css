@@ -56,13 +56,15 @@ header nav ul li a.active {
 /* Hero Section (Index Page) */
 .hero {
   height: 80vh;
-  /* IMPORTANT: note the correct relative path -> "../" to go back one folder from css/ */
-  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
-    url('../images/Inicioback.webp') no-repeat center center/cover;
+  /* No background image for Inicio page */
+  background: none; 
+  /* Alternatively, you could set a solid color if you want:
+     background: #00264d;
+  */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: white; /* If you keep white text but no background, it might be hard to see on a white body. Adjust as needed. */
   text-align: center;
 }
 
@@ -247,10 +249,12 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Seguros Page) */
+/* Swap out old 'seguros-hero.jpg' for 'Inicioback.webp' */
 .hero-seguros {
   height: 40vh;
-  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/seguros-hero.jpg') no-repeat center center/cover;
+  background: 
+    linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('../images/Inicioback.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,10 +323,11 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Fianzas Page) */
+/* Swap out old 'fianzas-hero.jpg' for 'handback.webp' */
 .hero-fianzas {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/fianzas-hero.jpg') no-repeat center center/cover;
+    url('../images/handback.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -439,7 +444,7 @@ footer {
   padding: 0 1em;
 }
 
-/* You can give this block a "cool style" */
+/* "Cool style" for alianzas-block */
 .alianzas-block {
   background: #fafafa;
   border-radius: 8px;
@@ -495,65 +500,22 @@ footer {
   text-align: center;
 }
 
-/* Adjust the logo size globally for all pages */
+/* Logo sizing globally */
 .logo {
-  height: 80px;       /* Increase height */
-  width: 225px;       /* Increase width */
-  object-fit: cover;  /* Ensures the image scales without distortion */
+  height: 80px;
+  width: 225px;
+  object-fit: cover;
 }
 
 /* Alianzas-lists columns */
 .alianzas-lists {
   display: flex;
-  flex-wrap: wrap; /* so they wrap on narrow screens */
-  gap: 2em; /* spacing between columns */
+  flex-wrap: wrap;
+  gap: 2em;
 }
 
 .aseguradoras-list,
 .afianzadoras-list {
-  flex: 1; /* each takes half the container if there's space */
-  min-width: 250px; /* ensures they don't shrink too much */
+  flex: 1;
+  min-width: 250px;
 }
-
-.hero {
-  height: 80vh;
-  background: url('../images/Inicioback.webp') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-/* ... [other CSS remains unchanged above] ... */
-
-/* Inicio Page Hero */
-.hero {
-  height: 80vh;
-  background: url('../images/Inicioback.webp') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-
-/* Move the hero content up a bit */
-.hero-content {
-  margin-top: -2rem; /* adjust as needed */
-}
-
-/* Seguros Page Hero */
-.hero-seguros {
-  height: 40vh;
-  background: 
-    linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), 
-    url('../images/handback.webp') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-
-/* ... [the rest of your CSS remains unchanged] ... */
-
