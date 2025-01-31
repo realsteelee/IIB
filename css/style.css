@@ -530,3 +530,98 @@ footer {
   flex: 1;
   min-width: 250px;
 }
+/* ===========================================
+   Media Queries (Tablet & Mobile)
+   Place this at the bottom of your existing CSS
+=========================================== */
+
+/* Tablet layout
+   This applies if the viewport width is 768px or less */
+@media (max-width: 768px) {
+
+  /* Example: Make the hero shorter on tablets */
+  .hero, .hero-seguros, .hero-fianzas, .hero-servicios, .hero-alianzas {
+    height: 50vh; 
+  }
+
+  /* Possibly reduce some large text */
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Stack or rearrange nav items */
+  .header-container {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  /* Example: narrower logo on tablet */
+  .logo {
+    height: 40px;
+  }
+
+}
+
+/* Mobile layout
+   This applies if the viewport width is 480px or less */
+@media (max-width: 480px) {
+
+  /* Even shorter hero for small phones */
+  .hero, .hero-seguros, .hero-fianzas, .hero-servicios, .hero-alianzas {
+    height: 40vh;
+  }
+
+  /* Smaller text */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Adjust the hero button? */
+  .hero-btn {
+    font-size: 1rem;      /* smaller text */
+    padding: 0.5em 1em;   /* less padding */
+  }
+
+  /* Stack nav items in one column,
+     center them, reduce font if needed */
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header nav ul li a {
+    font-size: 1rem;
+    padding: 0.4em 0.8em;
+  }
+
+  /* Example: reduce margins/padding on main content */
+  .introduction,
+  .seguros-content,
+  .fianzas-content,
+  .servicios-content,
+  .alianzas-content,
+  .contacto-content {
+    margin: 1em auto;
+    padding: 0 1em;
+  }
+
+  /* If you have columns that need stacking:
+     For example, .alianzas-lists or .vehicle-type */
+  .alianzas-lists, .vehicle-type {
+    flex-direction: column;
+  }
+
+}
