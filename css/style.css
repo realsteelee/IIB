@@ -53,10 +53,9 @@ header nav ul li a.active {
   background: #004080;
 }
 
-/* Hero Section (Index Page) */
-/* => 70vh & background-size: cover */
+/* Hero Section (Index Page) => 80vh, cover */
 .hero {
-  height: 70vh;
+  height: 80vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
     url('../images/indexpage.webp') center center no-repeat;
@@ -248,9 +247,9 @@ header nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* Hero Section (Seguros Page) => 70vh cover */
+/* Hero Section (Seguros Page) => 80vh, cover */
 .hero-seguros {
-  height: 70vh;
+  height: 80vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/Inicioback.webp') no-repeat center center;
@@ -322,9 +321,9 @@ header nav ul li a.active {
   text-align: center;
 }
 
-/* Hero Section (Fianzas Page) => 70vh cover */
+/* Hero Section (Fianzas Page) => 80vh, cover */
 .hero-fianzas {
-  height: 70vh;
+  height: 80vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/handback.webp') no-repeat center center;
@@ -380,7 +379,7 @@ header nav ul li a.active {
   color: #555;
 }
 
-/* Hero Section (Contacto Page) => 40vh cover */
+/* Hero Section (Contacto Page) => 40vh, cover (unchanged) */
 .hero-contacto {
   height: 40vh;
   background: 
@@ -437,9 +436,9 @@ footer {
   padding: 1em;
 }
 
-/* Hero Section (Servicios Page) => 70vh cover */
+/* Hero Section (Servicios Page) => 80vh, cover */
 .hero-servicios {
-  height: 70vh;
+  height: 80vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/serviciosiib.webp') no-repeat center center;
@@ -469,9 +468,9 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Section (Alianzas Page) => 70vh cover */
+/* Hero Section (Alianzas Page) => 80vh, cover */
 .hero-alianzas {
-  height: 70vh;
+  height: 80vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/alianzasiib.webp') no-repeat center center;
