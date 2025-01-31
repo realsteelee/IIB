@@ -16,55 +16,56 @@ body {
 header {
   background: #00264d;
   color: white;
-  padding: 1em 0; /* original header padding */
+  padding: 1em 0; /* original padding */
 }
 
+/* We make the header-container a flex container,
+   and position: relative so we can absolutely-position
+   the nav on mobile/tablet under the logo */
 .header-container {
-  position: relative; 
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; /* center content horizontally */
+  justify-content: space-between; /* hamburger on left, nav on right, but we'll center the logo via margin auto */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
 }
 
-/* Hamburger on the left, hidden by default on desktop */
+/* Hamburger on the left (desktop hidden by default),
+   on mobile we'll show it and float nav absolutely */
 .hamburger {
-  position: absolute;
-  left: 1em; 
-  display: none; 
   cursor: pointer;
+  /* On desktop, it’s visible but we’ll hide the nav or do a different approach in media queries */
+  /* We'll place it just inside the left edge with small margin if needed */
+  margin-right: 1em; 
 }
 
+/* The 3 lines */
 .hamburger span {
   display: block;
   width: 25px;
   height: 3px;
-  background: #fff;
+  background: #fff; 
   margin: 5px 0;
   transition: 0.3s;
 }
 
-/* Logo in the center (just let it be statically centered by .header-container) */
+/* Hidden checkbox for toggling the nav */
+#toggle-menu {
+  display: none;
+}
+
+/* Center the logo horizontally with margin auto */
 .logo {
   height: 60px;
-  margin: 0 auto;
-  /* width if needed:
-     width: 225px;
-     object-fit: cover; 
-  */
+  margin: 0 auto;  /* ensures the logo is centered in the flex row */
 }
 
-/* The nav is on the right by default in desktop. Trick:
-   We can push it to the right using "margin-left: auto;" */
-nav {
-  margin-left: auto; 
-}
-
+/* Nav is on the right in desktop (because of justify-content: space-between + margin-left won't be needed now) */
 nav ul {
   list-style: none;
-  display: flex; /* normal horizontal layout on desktop */
+  display: flex;
   gap: 1.5em;
 }
 
@@ -82,12 +83,7 @@ nav ul li a.active {
   background: #004080;
 }
 
-/* Hidden checkbox for the hamburger hack */
-#toggle-menu {
-  display: none;
-}
-
-/* Hero Section (Index Page) => 60vh */
+/* Hero (Index) => 60vh */
 .hero {
   height: 60vh;
   background:
@@ -111,13 +107,13 @@ nav ul li a.active {
   margin-bottom: 2rem;
 }
 
-/* Larger font for “Cotiza tu Seguro Ahora!” button */
+/* Larger “Cotiza tu Seguro Ahora!” */
 .hero-btn {
   padding: 0.8em 1.5em;
   background: #00264d;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.3rem; /* bigger */
+  font-size: 1.3rem; /* increased from 1.2rem */
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -126,7 +122,7 @@ nav ul li a.active {
   background: #004080;
 }
 
-/* INTRO & CTA (Index Page) */
+/* Introduction Section (Index Page) */
 .introduction {
   max-width: 800px;
   margin: 2em auto;
@@ -151,6 +147,7 @@ nav ul li a.active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* CTA Section (Index Page) */
 .cta-section {
   text-align: center;
   padding: 2em 1em;
@@ -177,7 +174,7 @@ nav ul li a.active {
   background: #003366;
 }
 
-/* QUOTE FORM, ETC. (Cotizar Page) */
+/* Quote Form (Cotizar Page) */
 #quote-form {
   padding: 2em 1em;
   background: white;
@@ -227,7 +224,7 @@ nav ul li a.active {
   background: #003366;
 }
 
-/* Vehicle Type Buttons (Cotizar) */
+/* Vehicle Type Buttons (Cotizar Page) */
 .vehicle-type {
   display: flex;
   gap: 1em;
@@ -256,7 +253,7 @@ nav ul li a.active {
   border-color: #00264d;
 }
 
-/* Rates Table (Cotizar) */
+/* Rates Table (Cotizar Page) */
 .rates-table {
   width: 100%;
   max-width: 800px;
@@ -281,7 +278,7 @@ nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* SEGUROS => 60vh */
+/* Seguros => 60vh */
 .hero-seguros {
   height: 60vh;
   background:
@@ -355,7 +352,7 @@ nav ul li a.active {
   text-align: center;
 }
 
-/* FIANZAS => 60vh */
+/* Fianzas => 60vh */
 .hero-fianzas {
   height: 60vh;
   background:
@@ -413,7 +410,7 @@ nav ul li a.active {
   color: #555;
 }
 
-/* CONTACTO => 40vh */
+/* Contacto => 40vh */
 .hero-contacto {
   height: 40vh;
   background:
@@ -470,7 +467,7 @@ footer {
   padding: 1em;
 }
 
-/* SERVICIOS => 60vh */
+/* Servicios => 60vh */
 .hero-servicios {
   height: 60vh;
   background:
@@ -501,7 +498,7 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ALIANZAS => 60vh */
+/* Alianzas => 60vh */
 .hero-alianzas {
   height: 60vh;
   background:
@@ -538,36 +535,44 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* HAMBURGER MENU FOR TABLET & MOBILE (≤768px) */
-
-/* By default (desktop), we show nav, hide hamburger. */
-/* #toggle-menu is hidden. */
-
+/* ============ HAMBURGER MENU FOR TABLET & MOBILE (≤768px) ============ */
 @media (max-width: 768px) {
+  /* Hide the normal nav horizontally, show hamburger logic */
+  nav ul {
+    display: none; 
+    flex-direction: column;
+  }
 
-  /* Show the hamburger on smaller screens */
+  /* Position the nav absolutely under the logo 
+     so the dropdown appears at the bottom of the IIB logo */
+  nav {
+    position: absolute;
+    top: 70px; /* adjust as needed to sit below your logo’s bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* or narrower if you prefer */
+    max-width: 300px; /* optional, if you want a narrower menu */
+  }
+
+  /* Display the hamburger on mobile */
   .hamburger {
     display: block;
+    /* place it at left side, same line as the logo if you want, 
+       or add margin if needed */
   }
 
-  /* The nav is hidden by default on mobile/tablet */
-  nav ul {
-    display: none;
-    flex-direction: column; /* they stack vertically once shown */
-  }
-
-  /* When #toggle-menu is checked, show nav links */
+  /* On click (checkbox checked), show the vertical dropdown */
   #toggle-menu:checked ~ nav ul {
-    display: flex; 
-    background: #00264d; /* optional background for dropdown */
-    margin-top: 1em;
+    display: flex;
+    background: #00264d; 
+    margin-top: 0.5em;
+    border: 1px solid #004080; /* optional border */
   }
 
-  /* Nav links style in dropdown */
   nav ul li a {
     display: block;
     padding: 1em;
-    border-bottom: 1px solid #004080; 
-    font-size: 1.1em;
+    border-bottom: 1px solid #004080;
+    text-align: center; /* center the text in the dropdown */
   }
 }
