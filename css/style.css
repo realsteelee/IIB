@@ -13,12 +13,11 @@ body {
 }
 
 /* Header Styles */
-/* Make the header smaller by reducing padding */
+/* Revert to the original 1em 0 for padding */
 header {
   background: #00264d;
   color: white;
-  /* from 1em 0 to 0.5em 0 */
-  padding: 0.5em 0;
+  padding: 1em 0;
 }
 
 .header-container {
@@ -55,9 +54,9 @@ header nav ul li a.active {
   background: #004080;
 }
 
-/* Hero Section (Index Page) => 70vh, cover */
+/* Hero Section (Index Page) => 60vh, cover */
 .hero {
-  height: 70vh;
+  height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
     url('../images/indexpage.webp') center center no-repeat;
@@ -249,9 +248,9 @@ header nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* Hero Section (Seguros Page) => 70vh cover */
+/* Hero Section (Seguros Page) => 60vh cover */
 .hero-seguros {
-  height: 70vh;
+  height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/Inicioback.webp') no-repeat center center;
@@ -323,9 +322,9 @@ header nav ul li a.active {
   text-align: center;
 }
 
-/* Hero Section (Fianzas Page) => 70vh cover */
+/* Hero Section (Fianzas Page) => 60vh cover */
 .hero-fianzas {
-  height: 70vh;
+  height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/handback.webp') no-repeat center center;
@@ -438,9 +437,9 @@ footer {
   padding: 1em;
 }
 
-/* Hero Section (Servicios Page) => 70vh cover */
+/* Hero Section (Servicios Page) => 60vh cover */
 .hero-servicios {
-  height: 70vh;
+  height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/serviciosiib.webp') no-repeat center center;
@@ -470,9 +469,9 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Section (Alianzas Page) => 70vh cover */
+/* Hero Section (Alianzas Page) => 60vh cover */
 .hero-alianzas {
-  height: 70vh;
+  height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/alianzasiib.webp') no-repeat center center;
