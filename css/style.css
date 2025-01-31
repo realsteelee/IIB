@@ -625,3 +625,52 @@ footer {
   }
 
 }
+/* ====== HAMBURGER MENU ONLY ON MOBILE/TABLET ====== */
+
+/* 1) Hide the checkbox visually */
+#toggle-menu {
+  display: none;
+}
+
+/* 2) By default, the hamburger icon is hidden (desktop sees normal nav) */
+.hamburger {
+  display: none; 
+  cursor: pointer;
+  /* optional: if you want the 3 lines aligned differently or sized, add styling */
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff; /* lines color */
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* 3) MEDIA QUERY: Up to 768px => show hamburger, hide desktop nav */
+@media (max-width: 768px) {
+  /* Show hamburger on mobile/tablet */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide the nav by default */
+  nav ul {
+    display: none;
+  }
+
+  /* When checkbox is checked, reveal nav (vertical list) */
+  #toggle-menu:checked ~ nav ul {
+    display: block;
+    margin-top: 1em;
+    background: #00264d; /* optional background for the dropdown */
+  }
+
+  /* Make nav links appear vertically stacked */
+  nav ul li a {
+    display: block;
+    padding: 1em;
+    border-bottom: 1px solid #004080; /* optional separator line */
+  }
+}
