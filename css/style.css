@@ -13,30 +13,39 @@ body {
 }
 
 /* HEADER */
+
+/* Default desktop header */
 header {
   background: #00264d;
   color: white;
-  padding: 1em 0; 
+  padding: 1em 0; /* original header padding */
 }
 
-/* Container is a flex row */
+/* Container: center content by default */
 .header-container {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; /* center everything horizontally by default */
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
 }
 
-/* Hamburger (hidden on desktop by default).
-   We'll show it in a media query. */
+/* Logo: centered by default */
+.logo {
+  height: 60px;
+  margin: 0 auto;
+  /* For desktop, no transform applied */
+}
+
+/* Hamburger (mobile only; hidden on desktop) */
 .hamburger {
-  display: none; 
+  display: none; /* hidden by default */
   cursor: pointer;
-  position: relative; /* so the spans are inside */
-  margin-right: auto; /* put it on left; the logo is more center */
+  position: absolute;
+  /* On mobile, we’ll position it on the left */
+  left: 1em;
 }
 
 .hamburger span {
@@ -48,19 +57,11 @@ header {
   transition: 0.3s;
 }
 
-/* Hidden checkbox for toggling nav */
-#toggle-menu {
-  display: none;
+/* Nav (desktop): show normally */
+nav {
+  margin-left: auto;
 }
 
-/* Logo is near center. We'll tweak on mobile for slight left shift. */
-.logo {
-  height: 60px;
-  margin: 0 auto; 
-}
-
-/* Nav is normal (desktop) on the right side. 
-   We'll adjust that in the media queries. */
 nav ul {
   list-style: none;
   display: flex;
@@ -81,9 +82,14 @@ nav ul li a.active {
   background: #004080;
 }
 
-/* ====== HEROES ====== */
+/* Hidden checkbox for toggling nav on mobile */
+#toggle-menu {
+  display: none;
+}
 
-/* Index => 60vh */
+/* HERO SECTIONS (unchanged except height) */
+
+/* Index Page Hero => 60vh */
 .hero {
   height: 60vh;
   background:
@@ -107,7 +113,7 @@ nav ul li a.active {
   margin-bottom: 2rem;
 }
 
-/* "Cotiza tu Seguro Ahora!" bigger */
+/* “Cotiza tu Seguro Ahora!” button (larger text) */
 .hero-btn {
   padding: 0.8em 1.5em;
   background: #00264d;
@@ -122,7 +128,7 @@ nav ul li a.active {
   background: #004080;
 }
 
-/* INTRO, CTA (Index Page) */
+/* Introduction & CTA (Index Page) */
 .introduction {
   max-width: 800px;
   margin: 2em auto;
@@ -173,7 +179,8 @@ nav ul li a.active {
   background: #003366;
 }
 
-/* QUOTE FORM (Cotizar Page) */
+/* QUOTE FORM (Cotizar Page) and Vehicle Buttons, Rates, etc. remain unchanged */
+
 #quote-form {
   padding: 2em 1em;
   background: white;
@@ -223,7 +230,6 @@ nav ul li a.active {
   background: #003366;
 }
 
-/* VEHICLE TYPE (Cotizar) */
 .vehicle-type {
   display: flex;
   gap: 1em;
@@ -252,7 +258,6 @@ nav ul li a.active {
   border-color: #00264d;
 }
 
-/* RATES TABLE (Cotizar) */
 .rates-table {
   width: 100%;
   max-width: 800px;
@@ -277,7 +282,9 @@ nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* SEGUROS => 60vh */
+/* HERO SECTIONS FOR OTHER PAGES */
+
+/* Seguros Page => 60vh */
 .hero-seguros {
   height: 60vh;
   background:
@@ -351,7 +358,7 @@ nav ul li a.active {
   text-align: center;
 }
 
-/* FIANZAS => 60vh */
+/* Fianzas Page => 60vh */
 .hero-fianzas {
   height: 60vh;
   background:
@@ -409,7 +416,7 @@ nav ul li a.active {
   color: #555;
 }
 
-/* CONTACTO => 40vh */
+/* Contacto Page => 40vh */
 .hero-contacto {
   height: 40vh;
   background:
@@ -458,15 +465,7 @@ nav ul li a.active {
   text-align: center;
 }
 
-/* Footer */
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 1em;
-}
-
-/* SERVICIOS => 60vh */
+/* Servicios Page => 60vh */
 .hero-servicios {
   height: 60vh;
   background:
@@ -497,7 +496,7 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ALIANZAS => 60vh */
+/* Alianzas Page => 60vh */
 .hero-alianzas {
   height: 60vh;
   background:
@@ -534,59 +533,51 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* ============ MEDIA QUERIES ============ */
-
-/* 1) Hide hamburger on desktop, show on mobile */
-@media (min-width: 769px) {
-  .hamburger {
-    display: none; /* no hamburger on desktop */
-  }
-  /* nav remains visible by default on desktop */
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1em;
 }
 
-/* 2) Mobile (≤768px): show hamburger, tweak logo, nav drops down under logo */
+/* ============ HAMBURGER MENU FOR MOBILE/ TABLET (≤768px) ============ */
 @media (max-width: 768px) {
-
-  /* Show hamburger on mobile, place it on left */
+  /* Show hamburger on mobile/tablet */
   .hamburger {
     display: block;
     position: absolute;
     left: 1em;
-    /* top: 50%; transform: translateY(-50%); 
-       if you want it exactly middle vertically 
-       but let's keep it simpler with top offsets 
-    */
     top: 50%;
     transform: translateY(-50%);
   }
 
-  /* Move the logo slightly left. 
-     e.g., reduce auto margin or do a small negative margin if needed. */
+  /* Adjust logo on mobile: center it by removing extra left margin and apply a slight left shift */
   .logo {
-    margin: 0 auto 0 15px; 
-    /* margin-left: 15px can shift it left if it’s off center 
-       tweak as needed 
-    */
+    margin: 0 auto;
+    transform: translateX(-5%); /* adjust this value as needed */
   }
 
-  /* Hide nav by default, show on checkbox checked */
+  /* Hide the nav by default; it will be toggled by the checkbox */
   nav ul {
     display: none;
     flex-direction: column;
   }
 
+  /* Position the nav dropdown to appear below the header (below the logo) */
   nav {
     position: absolute;
-    top: 70px; /* or tweak to line up under the logo */
+    top: 70px; /* adjust as needed to sit under the logo */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 300px; /* optional narrower dropdown */
+    max-width: 300px; /* dropdown width */
   }
 
+  /* When the checkbox is checked, show the nav dropdown */
   #toggle-menu:checked ~ nav ul {
     display: flex;
-    background: #00264d; 
+    background: #00264d;
     margin-top: 0.5em;
     border: 1px solid #004080;
   }
@@ -595,6 +586,6 @@ footer {
     display: block;
     padding: 1em;
     border-bottom: 1px solid #004080;
-    text-align: center; 
+    text-align: center;
   }
 }
