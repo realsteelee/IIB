@@ -3,94 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Servicios especializados de IIB Agente de Seguros y Fianzas S.A. de C.V.">
-  <title>Servicios - IIB Seguros</title>
+  <meta name="description" content="Alianzas de IIB Agente de Seguros y Fianzas con reconocidas compañías de seguros y fianzas."/>
+  <title>Nuestras Alianzas - IIB Seguros</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .space-after {
+      margin-bottom: 1em; /* space after that dividing paragraph */
+    }
+    .quote-center {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .bottom-indent {
+      margin-left: 2em;
+      margin-top: 2em;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="header-container">
-      <!-- Hamburger (left) -->
+      <img src="images/IIBlogo.jpg" alt="IIB Seguros Logo" class="logo">
+
+      <!-- Hidden checkbox + hamburger label -->
+      <input type="checkbox" id="toggle-menu" />
       <label for="toggle-menu" class="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <!-- Logo center -->
-      <img src="images/IIBlogo.jpg" alt="IIB Seguros Logo" class="logo">
-
-      <!-- Hidden checkbox -->
-      <input type="checkbox" id="toggle-menu" />
-
-      <!-- Nav -->
       <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="seguros.html">Seguros</a></li>
           <li><a href="fianzas.html">Fianzas</a></li>
-          <li><a href="servicios.html" class="active">Servicios</a></li>
-          <li><a href="alianzas.html">Alianzas</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="alianzas.html" class="active">Alianzas</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section for Servicios -->
-  <section class="hero-servicios">
-    <div class="hero-servicios-content">
-      <h1>Nuestros Servicios</h1>
-      <p>Protección completa y soluciones personalizadas para cada necesidad.</p>
+  <!-- Hero Section -->
+  <section class="hero-alianzas">
+    <div class="hero-alianzas-content">
+      <h1>Nuestras Alianzas</h1>
+      <p>Trabajamos con las mejores empresas para tu tranquilidad.</p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="page-content">
-    <section class="servicios-block">
-      <p>
-        En <strong>IIB Agente de Seguros y Fianzas S.A. de C.V.</strong> ofrecemos servicios
-        especializados para brindarte protección completa y soluciones personalizadas,
-        desde la atención de siniestros hasta la asesoría actuarial.
-      </p>
+  <main class="alianzas-content" style="max-width: 1000px; margin: 2em auto; padding: 0 1em;">
+    <h2 style="color: #00264d;">Nuestras Alianzas</h2>
+    <p class="space-after">
+      Dividimos nuestras alianzas en dos categorías principales: Aseguradoras y Afianzadoras.
+      De esta forma, ofrecemos opciones de cobertura y fianzas con diversas compañías de alto prestigio.
+    </p>
+
+    <section class="alianzas-block">
+      <div class="alianzas-lists">
+        <div class="aseguradoras-list">
+          <h3>Aseguradoras</h3>
+          <ul>
+            <li>AIG México</li>
+            <li>Allianz</li>
+            <li>ANA Seguros</li>
+            <li>AXA Seguros</li>
+            <li>GNP Grupo Nacional Provincial</li>
+            <li>HDI Seguros</li>
+            <li>MetLife</li>
+            <li>Plan Seguro</li>
+            <li>Quálitas Compañía de Seguros</li>
+            <li>Seguros Atlas</li>
+            <li>Seguros El Potosí</li>
+            <li>SURA Seguros</li>
+            <li>Zurich</li>
+          </ul>
+        </div>
+        <div class="afianzadoras-list">
+          <h3>Afianzadoras</h3>
+          <ul>
+            <li>Afianzadora Aserta</li>
+            <li>Afianzadora Insurgentes</li>
+            <li>Afianzadora Sofimex</li>
+            <li>AXA Fianzas</li>
+            <li>Fianzas Monterrey</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="servicios-block">
-      <h2>Siniestros</h2>
-      <p>
-        IIB Agente de Seguros y Fianzas S.A. de C.V. ofrece total disponibilidad por medio 
-        de un sistema de localización personal, garantizando atención las 24 horas del día 
-        los 365 días del año. Nos encargamos de coordinar la presentación de un ajustador, 
-        analizar la reclamación, determinar pérdidas y/o daños y gestionar el pago de la 
-        indemnización.
-      </p>
-      <ul>
-        <li>Evaluación de riesgos y pérdidas</li>
-        <li>Coberturas</li>
-        <li>Reclamaciones</li>
-        <li>Indemnización de siniestros</li>
-        <li>Soporte y atención las 24 horas</li>
-      </ul>
-      <p>
-        Además, contamos con una alianza estratégica con un reconocido despacho de abogados 
-        especializados en resolver, por la vía legal, reclamaciones en seguros y fianzas.
-      </p>
-    </section>
+    <!-- Centered quote -->
+    <p class="quote-center">
+      Su protección familiar y patrimonial<br />
+      “Asegure hoy y proteja el mañana”
+    </p>
 
-    <section class="servicios-block">
-      <h2>Actuaría</h2>
-      <p>
-        Brindamos estructuración y análisis preciso de las responsabilidades futuras derivadas 
-        de Pensiones, Retiro Voluntario y Beneficios a Largo Plazo, prima de antigüedad y más.
-      </p>
-      <h3>Asesoría Integral en:</h3>
-      <ul>
-        <li>Divulgación de la implementación del plan</li>
-        <li>Registro de la documentación para cumplir con disposiciones Legales y Fiscales</li>
-        <li>Medios de financiamiento para el plan (Casas de Bolsa, Aseguradoras y Bancos)</li>
-      </ul>
-    </section>
+    <!-- Bottom-left for the address -->
+    <p class="bottom-indent">
+      <strong>Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800</strong><br />
+      <strong>Tel/Fax:</strong> (55) 5658-4949
+    </p>
   </main>
 
   <!-- Footer -->
