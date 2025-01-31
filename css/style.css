@@ -54,9 +54,9 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Index Page) */
-/* Now using indexpage.webp with a semi-transparent overlay */
+/* Now the same height as Servicios -> 40vh */
 .hero {
-  height: 80vh;
+  height: 40vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
     url('../images/indexpage.webp') no-repeat center center/cover;
@@ -248,10 +248,10 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Seguros Page) */
-/* Using Inicioback.webp for Seguros */
 .hero-seguros {
   height: 40vh;
-  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+  background: 
+    linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/Inicioback.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -321,7 +321,6 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Fianzas Page) */
-/* Using handback.webp for Fianzas */
 .hero-fianzas {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
@@ -375,6 +374,54 @@ header nav ul li a.active {
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
+}
+
+/* Hero Section (Contacto Page) */
+/* Now using contactoiib.webp as the background */
+.hero-contacto {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('../images/contactoiib.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-contacto-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-contacto-content p {
+  font-size: 1.2rem;
+}
+
+.contacto-content {
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.contacto-block {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 2em 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contacto-block h2 {
+  color: #00264d;
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+}
+
+.closing-quote {
+  margin-top: 1em;
+  font-style: italic;
+  text-align: center;
 }
 
 /* Footer */
@@ -451,54 +498,7 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Hero Section (Contacto Page) */
-.hero-contacto {
-  height: 40vh;
-  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/contacto-hero.jpg') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-
-.hero-contacto-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-contacto-content p {
-  font-size: 1.2rem;
-}
-
-.contacto-content {
-  max-width: 1000px;
-  margin: 2em auto;
-  padding: 0 1em;
-}
-
-.contacto-block {
-  background: #fafafa;
-  border-radius: 8px;
-  padding: 1.5em;
-  margin: 2em 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.contacto-block h2 {
-  color: #00264d;
-  margin-bottom: 1em;
-  font-size: 1.5rem;
-}
-
-.closing-quote {
-  margin-top: 1em;
-  font-style: italic;
-  text-align: center;
-}
-
-/* Logo size globally */
+/* Adjust the logo size globally for all pages */
 .logo {
   height: 80px;
   width: 225px;
