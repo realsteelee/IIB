@@ -54,17 +54,16 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Index Page) */
+/* Now using indexpage.webp with a semi-transparent overlay */
 .hero {
   height: 80vh;
-  /* No background image for Inicio page */
-  background: none; 
-  /* Alternatively, you could set a solid color if you want:
-     background: #00264d;
-  */
+  background:
+    linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
+    url('../images/indexpage.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white; /* If you keep white text but no background, it might be hard to see on a white body. Adjust as needed. */
+  color: white;
   text-align: center;
 }
 
@@ -249,11 +248,10 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Seguros Page) */
-/* Swap out old 'seguros-hero.jpg' for 'Inicioback.webp' */
+/* Using Inicioback.webp for Seguros */
 .hero-seguros {
   height: 40vh;
-  background: 
-    linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
     url('../images/Inicioback.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -323,7 +321,7 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Fianzas Page) */
-/* Swap out old 'fianzas-hero.jpg' for 'handback.webp' */
+/* Using handback.webp for Fianzas */
 .hero-fianzas {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
@@ -444,7 +442,7 @@ footer {
   padding: 0 1em;
 }
 
-/* "Cool style" for alianzas-block */
+/* "Cool style" */
 .alianzas-block {
   background: #fafafa;
   border-radius: 8px;
@@ -500,7 +498,7 @@ footer {
   text-align: center;
 }
 
-/* Logo sizing globally */
+/* Logo size globally */
 .logo {
   height: 80px;
   width: 225px;
