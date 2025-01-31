@@ -54,14 +54,13 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Index Page) */
-/* 60vh in between old 80vh and 40vh used on Seguros,
-   and background-size: contain so entire image is visible */
+/* 60vh + cover to fill hero container with no empty space */
 .hero {
   height: 60vh;
   background: 
     linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
     url('../images/indexpage.webp') center center no-repeat;
-  background-size: contain; /* show entire image, might cause "letterbox" */
+  background-size: cover;  /* fill container without empty space (crops if ratio differs) */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -434,7 +433,6 @@ footer {
 }
 
 /* Hero Section (Servicios & Alianzas Page) */
-/* Using the new serviciosiib.webp image for Servicios page */
 .hero-servicios {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
@@ -465,10 +463,11 @@ footer {
 }
 
 /* Hero Section (Alianzas Page) */
+/* Now using alianzasiib.webp for the Alianzas hero */
 .hero-alianzas {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/alianzas-hero.jpg') no-repeat center center/cover;
+    url('../images/alianzasiib.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -491,7 +490,7 @@ footer {
   padding: 0 1em;
 }
 
-/* "Cool style" block */
+/* "Cool style" */
 .alianzas-block {
   background: #fafafa;
   border-radius: 8px;
