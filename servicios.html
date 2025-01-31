@@ -3,30 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Servicios especializados en Siniestros y Actuaría - IIB Seguros.">
-  <title>Nuestros Servicios - IIB Seguros</title>
+  <meta name="description" content="Servicios especializados de IIB Agente de Seguros y Fianzas S.A. de C.V.">
+  <title>Servicios - IIB Seguros</title>
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .top-space {
-      margin-top: 1em; /* space before “Servicios en Siniestros” & “Asesoría Integral en:” */
-    }
-    /* Indent the final address paragraph */
-    .bottom-indent {
-      margin-left: 2em; /* or whatever indentation you like */
-      margin-top: 2em; /* spacing above it */
-    }
-    /* Center “Su protección…” quote */
-    .quote-center {
-      text-align: center;
-      margin-top: 2em; /* space above the quote */
-    }
-  </style>
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="header-container">
       <img src="images/IIBlogo.jpg" alt="IIB Seguros Logo" class="logo">
+
+      <!-- Hidden checkbox + hamburger label -->
+      <input type="checkbox" id="toggle-menu" />
+      <label for="toggle-menu" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
       <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -40,34 +34,33 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section for Servicios -->
   <section class="hero-servicios">
     <div class="hero-servicios-content">
       <h1>Nuestros Servicios</h1>
-      <p>Soluciones integrales en Siniestros y Actuaría.</p>
+      <p>Protección completa y soluciones personalizadas para cada necesidad.</p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="page-content" style="max-width: 1000px; margin: 2em auto; padding: 0 1em;">
-    <!-- Intro Paragraph -->
-    <p>
-      En IIB Agente de Seguros y Fianzas S.A. de C.V. ofrecemos servicios especializados 
-      para brindarte protección completa y soluciones personalizadas, desde la atención 
-      de siniestros hasta la asesoría actuarial.
-    </p>
-
-    <!-- Siniestros Section -->
-    <section style="margin-top: 2em;">
-      <h2 style="color: #00264d;">Siniestros</h2>
+  <main class="page-content">
+    <section class="servicios-block">
       <p>
-        IIB Agente de Seguros y Fianzas S.A. de C.V. ofrece total disponibilidad 
-        por medio de un sistema de localización personal, garantizando atención 
-        las 24 horas del día los 365 días del año. Nos encargamos de coordinar 
-        la presentación de un ajustador, analizar la reclamación, determinar 
-        pérdidas y/o daños y gestionar el pago de la indemnización.
+        En <strong>IIB Agente de Seguros y Fianzas S.A. de C.V.</strong> ofrecemos servicios
+        especializados para brindarte protección completa y soluciones personalizadas,
+        desde la atención de siniestros hasta la asesoría actuarial.
       </p>
-      <h3 class="top-space">Servicios en Siniestros</h3>
+    </section>
+
+    <section class="servicios-block">
+      <h2>Siniestros</h2>
+      <p>
+        IIB Agente de Seguros y Fianzas S.A. de C.V. ofrece total disponibilidad por medio 
+        de un sistema de localización personal, garantizando atención las 24 horas del día 
+        los 365 días del año. Nos encargamos de coordinar la presentación de un ajustador, 
+        analizar la reclamación, determinar pérdidas y/o daños y gestionar el pago de la 
+        indemnización.
+      </p>
       <ul>
         <li>Evaluación de riesgos y pérdidas</li>
         <li>Coberturas</li>
@@ -76,40 +69,24 @@
         <li>Soporte y atención las 24 horas</li>
       </ul>
       <p>
-        Además, contamos con una alianza estratégica con un reconocido despacho 
-        de abogados especializados en resolver, por la vía legal, reclamaciones 
-        en seguros y fianzas.
+        Además, contamos con una alianza estratégica con un reconocido despacho de abogados 
+        especializados en resolver, por la vía legal, reclamaciones en seguros y fianzas.
       </p>
     </section>
 
-    <!-- Actuaría Section -->
-    <section style="margin-top: 2em;">
-      <h2 style="color: #00264d;">Actuaría</h2>
+    <section class="servicios-block">
+      <h2>Actuaría</h2>
       <p>
-        Brindamos estructuración y análisis preciso de las responsabilidades 
-        futuras derivadas de Pensiones, Retiro Voluntario y Beneficios a 
-        Largo Plazo, prima de antigüedad y más.
+        Brindamos estructuración y análisis preciso de las responsabilidades futuras derivadas 
+        de Pensiones, Retiro Voluntario y Beneficios a Largo Plazo, prima de antigüedad y más.
       </p>
-      <h3 class="top-space">Asesoría Integral en:</h3>
+      <h3>Asesoría Integral en:</h3>
       <ul>
         <li>Divulgación de la implementación del plan</li>
         <li>Registro de la documentación para cumplir con disposiciones Legales y Fiscales</li>
         <li>Medios de financiamiento para el plan (Casas de Bolsa, Aseguradoras y Bancos)</li>
       </ul>
     </section>
-
-    <!-- Centered “Su protección...” -->
-    <p class="quote-center">
-      Su protección familiar y patrimonial<br />
-      “Asegure hoy y proteja el mañana”
-    </p>
-
-    <!-- Bottom-left for the address, bold except the phone number -->
-    <p class="bottom-indent">
-      <strong>Av Revolución #633 Roof Garden, San Pedro de los Pinos México 03800</strong><br />
-      <strong>Tel/Fax:</strong> (55) 5658-4949
-    </p>
-
   </main>
 
   <!-- Footer -->
