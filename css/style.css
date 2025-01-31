@@ -12,12 +12,12 @@ body {
   line-height: 1.6;
 }
 
-/* Header Styles */
-/* Revert to the original 1em 0 for padding */
+/* ====== HEADER ====== */
+/* Reduced vertical padding to make header (logo + nav) smaller */
 header {
   background: #00264d;
   color: white;
-  padding: 1em 0;
+  padding: 0.5em 0; /* Was 1em 0 previously */
 }
 
 .header-container {
@@ -29,8 +29,9 @@ header {
   padding: 0 1em;
 }
 
+/* Logo made slightly smaller */
 .logo {
-  height: 60px;
+  height: 50px; /* Was 60px or 80px previously */
 }
 
 header nav ul {
@@ -39,22 +40,23 @@ header nav ul {
   gap: 1.5em;
 }
 
+/* Nav links slightly smaller & narrower padding */
 header nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
-  padding: 0.5em 1em;
+  font-size: 1.1em;      /* Was 1.2em */
+  padding: 0.3em 0.6em;  /* Was 0.5em 1em */
   border-radius: 5px;
   transition: background 0.3s ease;
 }
 
-/* Highlight active menu item or on hover */
 header nav ul li a:hover,
 header nav ul li a.active {
   background: #004080;
 }
 
-/* Hero Section (Index Page) => 60vh, cover */
+/* ====== HERO SECTIONS ====== */
+/* (Inicio hero - 60vh) */
 .hero {
   height: 60vh;
   background:
@@ -78,12 +80,13 @@ header nav ul li a.active {
   margin-bottom: 2rem;
 }
 
+/* Increased button text size */
 .hero-btn {
   padding: 0.8em 1.5em;
   background: #00264d;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;  /* was 1.2rem previously */
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -248,12 +251,13 @@ header nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* Hero Section (Seguros Page) => 60vh cover */
+/* Hero Sections for Other Pages */
+/* Seguros => 60vh */
 .hero-seguros {
   height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/Inicioback.webp') no-repeat center center;
+    url('../images/Inicioback.webp') center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -322,12 +326,12 @@ header nav ul li a.active {
   text-align: center;
 }
 
-/* Hero Section (Fianzas Page) => 60vh cover */
+/* Fianzas => 60vh */
 .hero-fianzas {
   height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/handback.webp') no-repeat center center;
+    url('../images/handback.webp') center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -380,12 +384,12 @@ header nav ul li a.active {
   color: #555;
 }
 
-/* Hero Section (Contacto Page) => 40vh cover */
+/* Contacto => 40vh */
 .hero-contacto {
   height: 40vh;
-  background: 
+  background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/contactoiib.webp') no-repeat center center;
+    url('../images/contactoiib.webp') center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -437,12 +441,12 @@ footer {
   padding: 1em;
 }
 
-/* Hero Section (Servicios Page) => 60vh cover */
+/* Servicios => 60vh */
 .hero-servicios {
   height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/serviciosiib.webp') no-repeat center center;
+    url('../images/serviciosiib.webp') center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -469,12 +473,12 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Section (Alianzas Page) => 60vh cover */
+/* Alianzas => 60vh */
 .hero-alianzas {
   height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/alianzasiib.webp') no-repeat center center;
+    url('../images/alianzasiib.webp') center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
