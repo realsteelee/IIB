@@ -16,53 +16,51 @@ body {
 header {
   background: #00264d;
   color: white;
-  padding: 1em 0; /* original padding */
+  padding: 1em 0; 
 }
 
-/* We make the header-container a flex container,
-   and position: relative so we can absolutely-position
-   the nav on mobile/tablet under the logo */
+/* Container is a flex row */
 .header-container {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* hamburger on left, nav on right, but we'll center the logo via margin auto */
+  justify-content: center; /* center everything horizontally by default */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
 }
 
-/* Hamburger on the left (desktop hidden by default),
-   on mobile we'll show it and float nav absolutely */
+/* Hamburger (hidden on desktop by default).
+   We'll show it in a media query. */
 .hamburger {
+  display: none; 
   cursor: pointer;
-  /* On desktop, it’s visible but we’ll hide the nav or do a different approach in media queries */
-  /* We'll place it just inside the left edge with small margin if needed */
-  margin-right: 1em; 
+  position: relative; /* so the spans are inside */
+  margin-right: auto; /* put it on left; the logo is more center */
 }
 
-/* The 3 lines */
 .hamburger span {
   display: block;
   width: 25px;
   height: 3px;
-  background: #fff; 
+  background: #fff;
   margin: 5px 0;
   transition: 0.3s;
 }
 
-/* Hidden checkbox for toggling the nav */
+/* Hidden checkbox for toggling nav */
 #toggle-menu {
   display: none;
 }
 
-/* Center the logo horizontally with margin auto */
+/* Logo is near center. We'll tweak on mobile for slight left shift. */
 .logo {
   height: 60px;
-  margin: 0 auto;  /* ensures the logo is centered in the flex row */
+  margin: 0 auto; 
 }
 
-/* Nav is on the right in desktop (because of justify-content: space-between + margin-left won't be needed now) */
+/* Nav is normal (desktop) on the right side. 
+   We'll adjust that in the media queries. */
 nav ul {
   list-style: none;
   display: flex;
@@ -83,7 +81,9 @@ nav ul li a.active {
   background: #004080;
 }
 
-/* Hero (Index) => 60vh */
+/* ====== HEROES ====== */
+
+/* Index => 60vh */
 .hero {
   height: 60vh;
   background:
@@ -107,13 +107,13 @@ nav ul li a.active {
   margin-bottom: 2rem;
 }
 
-/* Larger “Cotiza tu Seguro Ahora!” */
+/* "Cotiza tu Seguro Ahora!" bigger */
 .hero-btn {
   padding: 0.8em 1.5em;
   background: #00264d;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.3rem; /* increased from 1.2rem */
+  font-size: 1.3rem;
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -122,7 +122,7 @@ nav ul li a.active {
   background: #004080;
 }
 
-/* Introduction Section (Index Page) */
+/* INTRO, CTA (Index Page) */
 .introduction {
   max-width: 800px;
   margin: 2em auto;
@@ -147,7 +147,6 @@ nav ul li a.active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* CTA Section (Index Page) */
 .cta-section {
   text-align: center;
   padding: 2em 1em;
@@ -174,7 +173,7 @@ nav ul li a.active {
   background: #003366;
 }
 
-/* Quote Form (Cotizar Page) */
+/* QUOTE FORM (Cotizar Page) */
 #quote-form {
   padding: 2em 1em;
   background: white;
@@ -224,7 +223,7 @@ nav ul li a.active {
   background: #003366;
 }
 
-/* Vehicle Type Buttons (Cotizar Page) */
+/* VEHICLE TYPE (Cotizar) */
 .vehicle-type {
   display: flex;
   gap: 1em;
@@ -253,7 +252,7 @@ nav ul li a.active {
   border-color: #00264d;
 }
 
-/* Rates Table (Cotizar Page) */
+/* RATES TABLE (Cotizar) */
 .rates-table {
   width: 100%;
   max-width: 800px;
@@ -278,7 +277,7 @@ nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* Seguros => 60vh */
+/* SEGUROS => 60vh */
 .hero-seguros {
   height: 60vh;
   background:
@@ -352,7 +351,7 @@ nav ul li a.active {
   text-align: center;
 }
 
-/* Fianzas => 60vh */
+/* FIANZAS => 60vh */
 .hero-fianzas {
   height: 60vh;
   background:
@@ -410,7 +409,7 @@ nav ul li a.active {
   color: #555;
 }
 
-/* Contacto => 40vh */
+/* CONTACTO => 40vh */
 .hero-contacto {
   height: 40vh;
   background:
@@ -467,7 +466,7 @@ footer {
   padding: 1em;
 }
 
-/* Servicios => 60vh */
+/* SERVICIOS => 60vh */
 .hero-servicios {
   height: 60vh;
   background:
@@ -498,7 +497,7 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Alianzas => 60vh */
+/* ALIANZAS => 60vh */
 .hero-alianzas {
   height: 60vh;
   background:
@@ -535,44 +534,67 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* ============ HAMBURGER MENU FOR TABLET & MOBILE (≤768px) ============ */
+/* ============ MEDIA QUERIES ============ */
+
+/* 1) Hide hamburger on desktop, show on mobile */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* no hamburger on desktop */
+  }
+  /* nav remains visible by default on desktop */
+}
+
+/* 2) Mobile (≤768px): show hamburger, tweak logo, nav drops down under logo */
 @media (max-width: 768px) {
-  /* Hide the normal nav horizontally, show hamburger logic */
+
+  /* Show hamburger on mobile, place it on left */
+  .hamburger {
+    display: block;
+    position: absolute;
+    left: 1em;
+    /* top: 50%; transform: translateY(-50%); 
+       if you want it exactly middle vertically 
+       but let's keep it simpler with top offsets 
+    */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Move the logo slightly left. 
+     e.g., reduce auto margin or do a small negative margin if needed. */
+  .logo {
+    margin: 0 auto 0 15px; 
+    /* margin-left: 15px can shift it left if it’s off center 
+       tweak as needed 
+    */
+  }
+
+  /* Hide nav by default, show on checkbox checked */
   nav ul {
-    display: none; 
+    display: none;
     flex-direction: column;
   }
 
-  /* Position the nav absolutely under the logo 
-     so the dropdown appears at the bottom of the IIB logo */
   nav {
     position: absolute;
-    top: 70px; /* adjust as needed to sit below your logo’s bottom */
+    top: 70px; /* or tweak to line up under the logo */
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* or narrower if you prefer */
-    max-width: 300px; /* optional, if you want a narrower menu */
+    width: 100%;
+    max-width: 300px; /* optional narrower dropdown */
   }
 
-  /* Display the hamburger on mobile */
-  .hamburger {
-    display: block;
-    /* place it at left side, same line as the logo if you want, 
-       or add margin if needed */
-  }
-
-  /* On click (checkbox checked), show the vertical dropdown */
   #toggle-menu:checked ~ nav ul {
     display: flex;
     background: #00264d; 
     margin-top: 0.5em;
-    border: 1px solid #004080; /* optional border */
+    border: 1px solid #004080;
   }
 
   nav ul li a {
     display: block;
     padding: 1em;
     border-bottom: 1px solid #004080;
-    text-align: center; /* center the text in the dropdown */
+    text-align: center; 
   }
 }
