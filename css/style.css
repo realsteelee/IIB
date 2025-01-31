@@ -524,4 +524,36 @@ footer {
   color: white;
   text-align: center;
 }
+/* ... [other CSS remains unchanged above] ... */
+
+/* Inicio Page Hero */
+.hero {
+  height: 80vh;
+  background: url('../images/Inicioback.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Move the hero content up a bit */
+.hero-content {
+  margin-top: -2rem; /* adjust as needed */
+}
+
+/* Seguros Page Hero */
+.hero-seguros {
+  height: 40vh;
+  background: 
+    linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), 
+    url('../images/handback.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* ... [the rest of your CSS remains unchanged] ... */
 
