@@ -12,12 +12,11 @@ body {
   line-height: 1.6;
 }
 
-/* ====== HEADER ====== */
-/* Reduced vertical padding to make header (logo + nav) smaller */
+/* Header Styles */
 header {
   background: #00264d;
   color: white;
-  padding: 0.5em 0; /* Was 1em 0 previously */
+  padding: 1em 0; /* original padding */
 }
 
 .header-container {
@@ -29,23 +28,22 @@ header {
   padding: 0 1em;
 }
 
-
 .logo {
-  height: 50px; /* Was 60px or 80px previously */
+  height: 60px; 
 }
 
+/* Navigation */
 header nav ul {
   list-style: none;
   display: flex;
   gap: 1.5em;
 }
 
-/* Nav links slightly smaller & narrower padding */
 header nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.1em;      /* Was 1.2em */
-  padding: 0.3em 0.6em;  /* Was 0.5em 1em */
+  font-size: 1.2em;
+  padding: 0.5em 1em;
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -55,8 +53,7 @@ header nav ul li a.active {
   background: #004080;
 }
 
-/* ====== HERO SECTIONS ====== */
-/* (Inicio hero - 60vh) */
+/* Hero Section (Index Page) => 60vh */
 .hero {
   height: 60vh;
   background:
@@ -80,13 +77,13 @@ header nav ul li a.active {
   margin-bottom: 2rem;
 }
 
-/* Increased button text size */
+/* Larger text for the “Cotiza tu Seguro Ahora!” button */
 .hero-btn {
   padding: 0.8em 1.5em;
   background: #00264d;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.3rem;  /* was 1.2rem previously */
+  font-size: 1.3rem; /* was 1.2rem previously */
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -251,8 +248,7 @@ header nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* Hero Sections for Other Pages */
-/* Seguros => 60vh */
+/* Hero Section (Seguros Page) => 60vh */
 .hero-seguros {
   height: 60vh;
   background:
@@ -326,7 +322,7 @@ header nav ul li a.active {
   text-align: center;
 }
 
-/* Fianzas => 60vh */
+/* Hero Section (Fianzas Page) => 60vh */
 .hero-fianzas {
   height: 60vh;
   background:
@@ -384,7 +380,7 @@ header nav ul li a.active {
   color: #555;
 }
 
-/* Contacto => 40vh */
+/* Hero Section (Contacto Page) => 40vh */
 .hero-contacto {
   height: 40vh;
   background:
@@ -441,7 +437,7 @@ footer {
   padding: 1em;
 }
 
-/* Servicios => 60vh */
+/* Hero Section (Servicios Page) => 60vh */
 .hero-servicios {
   height: 60vh;
   background:
@@ -473,7 +469,7 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Alianzas => 60vh */
+/* Hero Section (Alianzas Page) => 60vh */
 .hero-alianzas {
   height: 60vh;
   background:
@@ -530,147 +526,50 @@ footer {
   flex: 1;
   min-width: 250px;
 }
-/* ===========================================
-   Media Queries (Tablet & Mobile)
-   Place this at the bottom of your existing CSS
-=========================================== */
 
-/* Tablet layout
-   This applies if the viewport width is 768px or less */
-@media (max-width: 768px) {
+/* ============ HAMBURGER MENU ONLY ON MOBILE/TABLET ============ */
 
-  /* Example: Make the hero shorter on tablets */
-  .hero, .hero-seguros, .hero-fianzas, .hero-servicios, .hero-alianzas {
-    height: 50vh; 
-  }
-
-  /* Possibly reduce some large text */
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  /* Stack or rearrange nav items */
-  .header-container {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  
-  /* Example: narrower logo on tablet */
-  .logo {
-    height: 40px;
-  }
-
-}
-
-/* Mobile layout
-   This applies if the viewport width is 480px or less */
-@media (max-width: 480px) {
-
-  /* Even shorter hero for small phones */
-  .hero, .hero-seguros, .hero-fianzas, .hero-servicios, .hero-alianzas {
-    height: 40vh;
-  }
-
-  /* Smaller text */
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  
-  .hero p {
-    font-size: 1rem;
-  }
-
-  /* Adjust the hero button? */
-  .hero-btn {
-    font-size: 1rem;      /* smaller text */
-    padding: 0.5em 1em;   /* less padding */
-  }
-
-  /* Stack nav items in one column,
-     center them, reduce font if needed */
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  header nav ul li a {
-    font-size: 1rem;
-    padding: 0.4em 0.8em;
-  }
-
-  /* Example: reduce margins/padding on main content */
-  .introduction,
-  .seguros-content,
-  .fianzas-content,
-  .servicios-content,
-  .alianzas-content,
-  .contacto-content {
-    margin: 1em auto;
-    padding: 0 1em;
-  }
-
-  /* If you have columns that need stacking:
-     For example, .alianzas-lists or .vehicle-type */
-  .alianzas-lists, .vehicle-type {
-    flex-direction: column;
-  }
-
-}
-/* ====== HAMBURGER MENU ONLY ON MOBILE/TABLET ====== */
-
-/* 1) Hide the checkbox visually */
+/* Hide the checkbox visually */
 #toggle-menu {
   display: none;
 }
 
-/* 2) By default, the hamburger icon is hidden (desktop sees normal nav) */
+/* By default (desktop), hamburger is hidden, nav is visible */
 .hamburger {
-  display: none; 
+  display: none;
   cursor: pointer;
-  /* optional: if you want the 3 lines aligned differently or sized, add styling */
 }
 
 .hamburger span {
   display: block;
   width: 25px;
   height: 3px;
-  background: #fff; /* lines color */
-  margin: 5px 0;
+  background: #fff; 
+  margin: 5px 0; 
   transition: 0.3s;
 }
 
-/* 3) MEDIA QUERY: Up to 768px => show hamburger, hide desktop nav */
+/* MEDIA QUERY: Up to 768px => show hamburger, hide normal nav */
 @media (max-width: 768px) {
-  /* Show hamburger on mobile/tablet */
   .hamburger {
     display: block;
   }
 
-  /* Hide the nav by default */
   nav ul {
-    display: none;
+    display: none; /* hide the nav links by default on mobile/tablet */
   }
 
-  /* When checkbox is checked, reveal nav (vertical list) */
+  /* When checkbox is checked, display the nav links (vertical) */
   #toggle-menu:checked ~ nav ul {
     display: block;
     margin-top: 1em;
-    background: #00264d; /* optional background for the dropdown */
+    background: #00264d; /* optional menu background color */
   }
 
-  /* Make nav links appear vertically stacked */
+  /* Make links stack vertically */
   nav ul li a {
     display: block;
     padding: 1em;
-    border-bottom: 1px solid #004080; /* optional separator line */
+    border-bottom: 1px solid #004080; 
   }
 }
