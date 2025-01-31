@@ -54,12 +54,14 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Index Page) */
-/* Now the same height as Servicios -> 40vh */
+/* 60vh in between old 80vh and 40vh used on Seguros,
+   and background-size: contain so entire image is visible */
 .hero {
-  height: 40vh;
-  background:
+  height: 60vh;
+  background: 
     linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
-    url('../images/indexpage.webp') no-repeat center center/cover;
+    url('../images/indexpage.webp') center center no-repeat;
+  background-size: contain; /* show entire image, might cause "letterbox" */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,7 +379,6 @@ header nav ul li a.active {
 }
 
 /* Hero Section (Contacto Page) */
-/* Now using contactoiib.webp as the background */
 .hero-contacto {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
@@ -433,10 +434,11 @@ footer {
 }
 
 /* Hero Section (Servicios & Alianzas Page) */
+/* Using the new serviciosiib.webp image for Servicios page */
 .hero-servicios {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
-    url('../images/servicios-hero.jpg') no-repeat center center/cover;
+    url('../images/serviciosiib.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,7 +491,7 @@ footer {
   padding: 0 1em;
 }
 
-/* "Cool style" */
+/* "Cool style" block */
 .alianzas-block {
   background: #fafafa;
   border-radius: 8px;
