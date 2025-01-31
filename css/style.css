@@ -12,34 +12,63 @@ body {
   line-height: 1.6;
 }
 
-/* Header Styles */
+/* HEADER */
 header {
   background: #00264d;
   color: white;
-  padding: 1em 0; /* original padding */
+  padding: 1em 0; /* original header padding */
 }
 
 .header-container {
+  position: relative; 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center; /* center content horizontally */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
 }
 
-.logo {
-  height: 60px; 
+/* Hamburger on the left, hidden by default on desktop */
+.hamburger {
+  position: absolute;
+  left: 1em; 
+  display: none; 
+  cursor: pointer;
 }
 
-/* Navigation */
-header nav ul {
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Logo in the center (just let it be statically centered by .header-container) */
+.logo {
+  height: 60px;
+  margin: 0 auto;
+  /* width if needed:
+     width: 225px;
+     object-fit: cover; 
+  */
+}
+
+/* The nav is on the right by default in desktop. Trick:
+   We can push it to the right using "margin-left: auto;" */
+nav {
+  margin-left: auto; 
+}
+
+nav ul {
   list-style: none;
-  display: flex;
+  display: flex; /* normal horizontal layout on desktop */
   gap: 1.5em;
 }
 
-header nav ul li a {
+nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.2em;
@@ -48,9 +77,14 @@ header nav ul li a {
   transition: background 0.3s ease;
 }
 
-header nav ul li a:hover,
-header nav ul li a.active {
+nav ul li a:hover,
+nav ul li a.active {
   background: #004080;
+}
+
+/* Hidden checkbox for the hamburger hack */
+#toggle-menu {
+  display: none;
 }
 
 /* Hero Section (Index Page) => 60vh */
@@ -77,13 +111,13 @@ header nav ul li a.active {
   margin-bottom: 2rem;
 }
 
-/* Larger text for the “Cotiza tu Seguro Ahora!” button */
+/* Larger font for “Cotiza tu Seguro Ahora!” button */
 .hero-btn {
   padding: 0.8em 1.5em;
   background: #00264d;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.3rem; /* was 1.2rem previously */
+  font-size: 1.3rem; /* bigger */
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -92,7 +126,7 @@ header nav ul li a.active {
   background: #004080;
 }
 
-/* Introduction Section (Index Page) */
+/* INTRO & CTA (Index Page) */
 .introduction {
   max-width: 800px;
   margin: 2em auto;
@@ -117,7 +151,6 @@ header nav ul li a.active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* CTA Section (Index Page) */
 .cta-section {
   text-align: center;
   padding: 2em 1em;
@@ -144,7 +177,7 @@ header nav ul li a.active {
   background: #003366;
 }
 
-/* Quote Form (Cotizar Page) */
+/* QUOTE FORM, ETC. (Cotizar Page) */
 #quote-form {
   padding: 2em 1em;
   background: white;
@@ -194,7 +227,7 @@ header nav ul li a.active {
   background: #003366;
 }
 
-/* Vehicle Type Buttons (Cotizar Page) */
+/* Vehicle Type Buttons (Cotizar) */
 .vehicle-type {
   display: flex;
   gap: 1em;
@@ -223,7 +256,7 @@ header nav ul li a.active {
   border-color: #00264d;
 }
 
-/* Rates Table (Cotizar Page) */
+/* Rates Table (Cotizar) */
 .rates-table {
   width: 100%;
   max-width: 800px;
@@ -248,7 +281,7 @@ header nav ul li a.active {
   background: #f2f2f2;
 }
 
-/* Hero Section (Seguros Page) => 60vh */
+/* SEGUROS => 60vh */
 .hero-seguros {
   height: 60vh;
   background:
@@ -322,7 +355,7 @@ header nav ul li a.active {
   text-align: center;
 }
 
-/* Hero Section (Fianzas Page) => 60vh */
+/* FIANZAS => 60vh */
 .hero-fianzas {
   height: 60vh;
   background:
@@ -380,7 +413,7 @@ header nav ul li a.active {
   color: #555;
 }
 
-/* Hero Section (Contacto Page) => 40vh */
+/* CONTACTO => 40vh */
 .hero-contacto {
   height: 40vh;
   background:
@@ -437,7 +470,7 @@ footer {
   padding: 1em;
 }
 
-/* Hero Section (Servicios Page) => 60vh */
+/* SERVICIOS => 60vh */
 .hero-servicios {
   height: 60vh;
   background:
@@ -460,7 +493,6 @@ footer {
   font-size: 1.2rem;
 }
 
-/* Optional “cool style” blocks for Servicios page */
 .servicios-block {
   background: #fafafa;
   border-radius: 8px;
@@ -469,7 +501,7 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Section (Alianzas Page) => 60vh */
+/* ALIANZAS => 60vh */
 .hero-alianzas {
   height: 60vh;
   background:
@@ -498,7 +530,6 @@ footer {
   padding: 0 1em;
 }
 
-/* "Cool style" block for alianzas */
 .alianzas-block {
   background: #fafafa;
   border-radius: 8px;
@@ -507,69 +538,36 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Adjust the logo size globally for all pages */
-.logo {
-  height: 80px;
-  width: 225px;
-  object-fit: cover;
-}
+/* HAMBURGER MENU FOR TABLET & MOBILE (≤768px) */
 
-/* Alianzas-lists columns */
-.alianzas-lists {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-}
+/* By default (desktop), we show nav, hide hamburger. */
+/* #toggle-menu is hidden. */
 
-.aseguradoras-list,
-.afianzadoras-list {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* ============ HAMBURGER MENU ONLY ON MOBILE/TABLET ============ */
-
-/* Hide the checkbox visually */
-#toggle-menu {
-  display: none;
-}
-
-/* By default (desktop), hamburger is hidden, nav is visible */
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #fff; 
-  margin: 5px 0; 
-  transition: 0.3s;
-}
-
-/* MEDIA QUERY: Up to 768px => show hamburger, hide normal nav */
 @media (max-width: 768px) {
+
+  /* Show the hamburger on smaller screens */
   .hamburger {
     display: block;
   }
 
+  /* The nav is hidden by default on mobile/tablet */
   nav ul {
-    display: none; /* hide the nav links by default on mobile/tablet */
+    display: none;
+    flex-direction: column; /* they stack vertically once shown */
   }
 
-  /* When checkbox is checked, display the nav links (vertical) */
+  /* When #toggle-menu is checked, show nav links */
   #toggle-menu:checked ~ nav ul {
-    display: block;
+    display: flex; 
+    background: #00264d; /* optional background for dropdown */
     margin-top: 1em;
-    background: #00264d; /* optional menu background color */
   }
 
-  /* Make links stack vertically */
+  /* Nav links style in dropdown */
   nav ul li a {
     display: block;
     padding: 1em;
     border-bottom: 1px solid #004080; 
+    font-size: 1.1em;
   }
 }
